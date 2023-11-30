@@ -1,0 +1,36 @@
+<section>
+  <h2>{{ title }}</h2>
+
+  <form>
+    <div>
+      <label for="email">Email address</label>
+      <input class="form-control" type="email" placeholder="Email address" />
+    </div>
+
+    <div>
+      <label for="password">password</label>
+      <input
+        class="form-control"
+        type="password"
+        placeholder="Enter password"
+      />
+    </div>
+    @if (title!="Sign in") {
+    <div>
+      <label for="confirm">Confirm password</label>
+      <input
+        class="form-control"
+        type="password"
+        placeholder="Enter password"
+      />
+    </div>
+    }
+
+    <div>
+      <button type="button" class="btn btn-primary">{{ title }}</button>
+      <p>
+        {{  word }} have an account? <span>{{reTitle}}</span>
+      </p>
+    </div>
+  </form>
+</section>
