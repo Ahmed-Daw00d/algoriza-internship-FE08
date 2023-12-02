@@ -1,5 +1,4 @@
 section {
-
   .head {
     background: no-repeat url("/assets/images/home/top.png");
     margin: 0 auto;
@@ -17,17 +16,21 @@ section {
         margin-bottom: 20px;
       }
     }
-    form{
+    form {
       border-radius: 10px;
       background-color: white;
-        display: flex;
-        max-width: 1030px;
-        justify-content: space-around;
-        input,select{
-          max-width: 148px;
-        }
-        position: absolute;
-        bottom: -10px;
+      display: flex;
+      max-width: 1030px;
+      justify-content: space-around;
+      input,
+      select {
+        max-width: 148px;
+      }
+      position: absolute;
+      bottom: -10px;
+      left: 10%;
+      right: 15%;
+      padding: 15px;
     }
   }
 }
