@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+cards:any[]=[{"img":"/assets/images/home/Australia.png","title":"Australia",'describe':"2246 properties"},{"img":"/assets/images/home/japan.png","title":"japan",'describe':"2246 properties"},{"img":"/assets/images/home/NewZ.png","title":"New Zealand",'describe':"2246 properties"},{"img":"/assets/images/home/Greece.png","title":"Greece",'describe':"2246 properties"}];
   constructor(private router:Router){}
 
   search(){
@@ -18,4 +18,6 @@ export class HomeComponent {
 this.router.navigate(['/sign'])
     }
   }
+
+
 }
