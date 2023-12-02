@@ -1,5 +1,5 @@
 <section>
-  <div class="head">
+  <header>
     <div>
       <h1>Enjoy Your Dream Vacation</h1>
       <p>
@@ -8,14 +8,29 @@
       </p>
     </div>
     <form>
-      <select class="form-control" >
-        <option value="All">where are you going? </option>
+      <select class="form-control">
+        <option value="All">where are you going?</option>
       </select>
       <input class="form-control" type="date" />
       <input class="form-control" type="date" />
-      <input class="form-control" type="text" />
-      <input class="form-control" type="text"  placeholder="assets/images/home/Rectangle 77.png"/>
-      <button type="button" class="btn btn-primary" (click)="search()">search</button>
+      <input class="form-control" type="text" placeholder="Guests" />
+      <input id="rooms" class="form-control" type="text" placeholder="Rooms" />
+      <button type="button" class="btn btn-primary" (click)="search()">
+        search
+      </button>
     </form>
-  </div>
+  </header>
+
+  <main>
+    <div class="alert alert-warning m-" role="alert">
+      ⚠️ Check the latest COVID-19 restrictions before you travel.  <a href="#" class="alert-link">Learn more</a>. 
+    </div>
+    <article>
+      <h1>Enjoy Your Dream Vacation</h1>
+      <p>
+        Plan and book our perfect trip with expert advice, travel tips,
+        destination information and inspiration from us
+      </p>
+    </article>
+  </main>
 </section>
