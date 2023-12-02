@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+
+import { Router } from "@angular/router";
 @Component({
   selector: "app-sign",
   templateUrl: "./sign.component.html",
@@ -14,7 +16,7 @@ export class SignComponent {
   user: any[] = [];
   alert: boolean = false;
   //
-  constructor(private build: FormBuilder) {}
+  constructor(private build: FormBuilder, private router: Router) {}
   ngOnInit() {
     this.form = this.build.group({
       email: ["", [Validators.required]],
@@ -31,7 +33,7 @@ export class SignComponent {
     this.reTitle == "Register"
       ? (this.reTitle = "Sign in")
       : (this.reTitle = "Register");
-      this.alert=false;
+    this.alert = false;
   }
   //
   register() {
@@ -44,11 +46,9 @@ export class SignComponent {
         this.user.push(this.form.value);
         localStorage.setItem("user", JSON.stringify(this.user));
       }
-
     } else {
       this.signIn();
     }
-    
   }
   //
   signIn() {
@@ -59,8 +59,13 @@ export class SignComponent {
           res.email == this.form.value.email &&
           res.password == this.form.value.password
       );
-      x !== undefined ? (this.alert = false) : (this.alert = true);
-  console.log(x)
+      if (x !== undefined) {
+        this.alert = false;
+        this.router.navigate(["/home"]);
+        console.log(x);
+      } else {
+        this.alert = true;
+      }
     } else {
       this.convert();
     }

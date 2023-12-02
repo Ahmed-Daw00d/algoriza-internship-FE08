@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private router:Router){}
+
+  search(){
+    if("user" in localStorage){
+
+    }
+    else{
+this.router.navigate(['/sign'])
+    }
+  }
 }
