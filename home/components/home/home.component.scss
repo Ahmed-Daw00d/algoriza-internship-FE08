@@ -5,7 +5,7 @@ section {
     margin: 0 auto;
     height: 32rem;
     position: relative;
-    margin: 0 auto;
+
     div {
       color: white;
       position: absolute;
@@ -44,6 +44,38 @@ section {
     .cards {
       display: flex;
       justify-content: space-between;
+    }
+    h4 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .trips {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      .card-body {
+        position: absolute;
+        bottom: 0;
+        color: white;
+      }
+    }
+    .app-d {
+      background: no-repeat url("/assets/images/home/app.png");
+      margin: 0 auto;
+      height: 23rem;
+
+      color: white;
+      div {
+        margin-top: 50px;
+        margin-left: 50px;
+        max-width: 580px;
+      }
+    }
+    .end {
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }

@@ -26,6 +26,7 @@
       ⚠️ Check the latest COVID-19 restrictions before you travel.
       <a href="#" class="alert-link">Learn more</a>.
     </div>
+    <!--  -->
     <article>
       <h1>Enjoy Your Dream Vacation</h1>
       <p>
@@ -33,19 +34,66 @@
         destination information and inspiration from us
       </p>
     </article>
-
+    <!-- card-first  -->
     <article class="cards">
       @for (item of cards; track $index) {
       <div class="card" style="width: 18rem">
-        <img src="{{item.img}}" class="card-img-top" alt="..." />
+        <img src="{{ item.img }}" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">{{item.title}}</h5>
+          <h5 class="card-title">{{ item.title }}</h5>
           <p class="card-text">
-         {{item.describe}}
+            {{ item.describe }}
           </p>
         </div>
       </div>
       }
     </article>
+    <!--trips  -->
+    <h4>Get inspiration for your next trip</h4>
+    <article class="trips">
+      @for (item of trips; track $index) {
+      <div class="card" style="width: 25rem">
+        <img src="{{ item.img }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">
+            {{ item.describe }}
+          </p>
+        </div>
+      </div>
+      }
+    </article>
+    <!-- hotels -->
+    <h4>Popular hotels</h4>
+    <article class="cards">
+      @for (item of hotels; track $index) {
+      <div class="card" style="width: 18rem">
+        <img src="{{ item.img }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">
+            {{ item.describe }}
+          </p>
+        </div>
+      </div>
+      }
+    </article>
+    <!--  -->
+    <div class="app-d">
+      <div>
+        <br /><br />
+        <h4>
+          Download the mobile application for bonus coupons and travel codes
+        </h4>
+        <button type="button" class="btn btn-primary">
+          Download mobile app
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <div class="end">
+      <h3>Explore the world with My Dream place</h3>
+      <a href="#">Discover new places and experiences</a>
+    </div>
   </main>
 </section>
