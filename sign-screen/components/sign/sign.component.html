@@ -1,10 +1,10 @@
 <section>
   <h2>{{ title }}</h2>
 
-  <form>
+  <form [formGroup]="form">
     <div>
       <label for="email">Email address</label>
-      <input class="form-control" type="email" placeholder="Email address" />
+      <input class="form-control" type="email" placeholder="Email address" id="email" formControlName="email"/>
     </div>
 
     <div>
@@ -12,7 +12,9 @@
       <input
         class="form-control"
         type="password"
+        id="password"
         placeholder="Enter password"
+        formControlName="password"
       />
     </div>
     @if (title!="Sign in") {
@@ -22,15 +24,21 @@
         class="form-control"
         type="password"
         placeholder="Enter password"
+        id="confirm"
+        formControlName="confirm"
       />
     </div>
     }
 
     <div>
-      <button type="button" class="btn btn-primary">{{ title }}</button>
+      <button [disabled]="!form.valid" type="button" class="btn btn-primary" (click)="register()">{{ title }}</button>
       <p>
-        {{word }} have an account? <span>{{reTitle}}</span>
+        {{word}} have an account? <span (click)="convert()">{{reTitle}}</span>
       </p>
     </div>
   </form>
+
+  <div class="alert alert-danger" role="alert" *ngIf="alert">
+ password or email is mistake
+  </div>
 </section>
